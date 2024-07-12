@@ -12,13 +12,23 @@ public class NormalItem : ItemInventoryBase
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (_info == null)
+            return;
+        _imageItem.sprite = _info._image;
+        _nameItem.text = _info._name;
+        _quantityItem.text = this._quantity.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public override void UpdateQuantity(int newQuantity)
+    {
+        base.UpdateQuantity(newQuantity);
+        _quantityItem.text = this._quantity.ToString();
+
     }
     private void OnDrawGizmosSelected()
     {

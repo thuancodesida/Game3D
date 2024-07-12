@@ -98,6 +98,7 @@
     <Compile Include="Assets\Import\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
     <Compile Include="Assets\Import\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\Import\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Inventory\DragController.cs" />
     <Compile Include="Assets\Import\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\Enemy\SkinnedMeshToMesh.cs" />
     <Compile Include="Assets\Import\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />

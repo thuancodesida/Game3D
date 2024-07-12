@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DVAH;
 using System.Linq;
+using UnityEngine.EventSystems;
+using UnityEditor.Events;
 
 public class InventoryManager : Singleton<InventoryManager>
 {
@@ -11,6 +13,7 @@ public class InventoryManager : Singleton<InventoryManager>
     public List<ItemInventoryBase> items => _items;
 
     [SerializeField] List<Transform> _itemSlots = new List<Transform>();
+    public List<Transform> itemSlot => _itemSlots;
     void Start()
     {
         _itemSlots = _girdLayout.GetComponentsInChildren<Transform>().ToList();
@@ -22,7 +25,26 @@ public class InventoryManager : Singleton<InventoryManager>
         int i = 0;
         foreach (ItemInventoryBase item in _items)
         {
-            Instantiate(item.gameObject, _itemSlots[i]);
+            EventTrigger g = Instantiate(item.gameObject, _itemSlots[i]).GetComponent<EventTrigger>();
+            var pDown = new EventTrigger.Entry
+            {
+                eventID = EventTriggerType.PointerDown
+            };
+            pDown.callback.AddListener(eventData =>
+            {
+                DragController.Instant.setMovingItem(g.gameObject);
+            });
+            g.triggers.Add(pDown);
+            var pUp = new EventTrigger.Entry
+            {
+                eventID = EventTriggerType.PointerUp
+            };
+            pUp.callback.AddListener(eventData =>
+            {
+                DragController.Instant.removeMovingItem();
+            });
+            g.triggers.Add(pUp);
+            
             i++;
         }
     }
