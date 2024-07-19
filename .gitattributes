@@ -8,3 +8,4 @@ Assett/Import filter=lfs diff=lfs merge=lfs -text
 Assets/Import filter=lfs diff=lfs merge=lfs -text
 Assets filter=lfs diff=lfs merge=lfs -text
 Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+Assets/Wizards[[:space:]]Code/Terrains/Hills,[[:space:]]Mountains[[:space:]]and[[:space:]]Lakes/Textures/Grass003_4K_NormalDX.png filter=lfs diff=lfs merge=lfs -text
