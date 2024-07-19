@@ -407,7 +407,6 @@
 "Assets/Import/Invector-3rdPersonController_LITE/Scripts/CharacterCreator/Script/Editor/vCreateBasicCharacterEditor.cs"
 "Assets/Import/Invector-3rdPersonController_LITE/Scripts/CharacterCreator/Script/Editor/vHelperEditor.cs"
 "Assets/Import/Invector-3rdPersonController_LITE/Scripts/Generic/Utils/Editor/vCommentEditor.cs"
-"Assets/Import/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs"
 "Assets/Inventory/AdvancedPlayerPrefsWindow/Editor/APPWindow.cs"
 "Assets/Inventory/AdvancedPlayerPrefsWindow/Editor/Plist.cs"
 -langversion:9.0
